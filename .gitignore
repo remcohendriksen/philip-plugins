@@ -1,0 +1,41 @@
+# General Ignored files
+*.orig
+*.rej
+*~
+*.log
+*.bak
+*.swp
+*.tmp
+*.temp
+.DS_Store
+Desktop.ini
+Thumbs.db
+.*.sw[a-z]
+*.un~
+Session.vim
+temp
+temp/
+
+# Other versioning systems
+.svn/
+_svn/
+*.svn*
+/.hg/*
+*/.hg/*
+.hgignore
+.subversion
+
+# Temp files of IDE's
+*.iml
+*.ipr
+*.iws
+.idea/
+nbactions.xml
+nbproject/
+.project
+
+# Composer files
+composer.phar
+composer.lock
+vendor/
+
