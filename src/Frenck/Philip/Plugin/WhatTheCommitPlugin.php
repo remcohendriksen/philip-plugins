@@ -5,7 +5,7 @@
  * For the full copyright and license information, please view the LICENSE.txt
  * file that was distributed with this source code.
  *
- * @copyright 2013 Franck Nijhof <frenck@gmail.com>
+ * @copyright 2014 Franck Nijhof <frenck@gmail.com>
  * @link      http://frenck.nl
  */
 
@@ -33,7 +33,7 @@ class WhatTheCommitPlugin extends AbstractPlugin
         $that = $this;
 
         $this->bot->onChannel(
-            '/^!wtc$/',
+            '/^!(wtc|cm)/i',
             function (Event $event) use ($that) {
                 $request = $event->getRequest();
                 $data = $that->getCommitMessage();
@@ -57,7 +57,7 @@ class WhatTheCommitPlugin extends AbstractPlugin
             return ucfirst($httpResponse->getBody(true));
         }
 
-        return 'Sorry! I was unable to scrape a awesome commit message from the interwebs :(';
+        return 'Sorry! I was unable to scrape an awesome commit message from the interwebs :(';
     }
 
     /**
@@ -79,6 +79,6 @@ class WhatTheCommitPlugin extends AbstractPlugin
      */
     public function displayHelp(Event $event)
     {
-        return '!wtc - Gives a random commit message.';
+        return '!cm - Gives a random commit message.';
     }
 }
